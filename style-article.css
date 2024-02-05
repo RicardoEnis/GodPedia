@@ -103,16 +103,16 @@ nav ul li:hover, .h-wrapper:hover{
 /* main */
 .tittle{
     max-width: fit-content;
-    margin: 0 auto 2.4rem;
+    margin: 0 auto;
     
 }
 .tittle p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .tittle span {
     color: lightslategray;
     display: block;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 
@@ -132,11 +132,8 @@ main .h-wrapper {
 }
 
 .mainArticle img {
-        margin-right: 1.2rem;
-        max-width: 12.3rem;
-        max-height: 23rem;
-        width: auto;
-        height: auto;
+    max-height: 23rem;
+    margin-right: 1.2rem;
 }
 .mainArticle a {
     font-size: 1.2rem;
@@ -223,12 +220,7 @@ footer p {
 }
 
 @media (min-width: 1020px) {
-    .article-wrapper {
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem; 
-    
-
+    .article-wrapper {      
         margin-bottom: 1.2rem;
     }
     .mainArticle .image-wrapper {
