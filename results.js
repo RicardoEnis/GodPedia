@@ -1,3 +1,15 @@
+// Função para carregar o JSON externo
+async function loadExternalJSON(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data; // Retorna os dados do JSON
+    } catch (error) {
+        console.error(`Erro ao carregar o JSON externo de ${url}:`, error);
+        throw error; // Lança o erro para ser tratado externamente, se necessário
+    }
+}
+
 // Função para exibir os resultados na página
 function displayResults(results) {
     const searchResults = document.getElementById('searchResults');
@@ -14,13 +26,16 @@ function displayResults(results) {
             const article = document.createElement('div');
             article.classList.add('mainArticle');
 
-            // Adicionando a imagem como um link para item.url
-            const imageURL = item.imageURL ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer"><img src="${item.imageURL}" alt="Imagem"></a>` : '';
+            // Adicionando a imagem se a URL estiver presente
+            const imageURL = item.imageURL ? `<img src="${item.imageURL}" alt="${Array.isArray(item.title) ? item.title[0] : item.title}">` : '';
 
             article.innerHTML = `
                 <figure>
+                    <a href="${item.url}">${Array.isArray(item.title) ? item.title[0] : item.title}</a>
                     ${imageURL}
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer">Representação de ${Array.isArray(item.title) ? item.title[0] : item.title}</a>
                 </figure>
+                <p>${item.content}</p>
             `;
             searchResults.appendChild(article);
         });
@@ -55,6 +70,11 @@ async function loadData() {
     } catch (error) {
         // Trate o erro aqui, se necessário
         console.error('Erro ao carregar ou processar os dados:', error);
+    }
+}
+
+// Chame a função para iniciar o processo
+document.addEventListener('DOMContentLoaded', loadData);
     }
 }
 
