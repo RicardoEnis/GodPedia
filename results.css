@@ -117,6 +117,7 @@ nav ul li:hover, .h-wrapper:hover{
 
 .mainArticle figure{
     display:flex;
+    flex-direction: column;
 }
 main .h-wrapper {
        width: fit-content;
