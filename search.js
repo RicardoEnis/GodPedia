@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sessionStorage.setItem('searchTerm', searchTerm);
 
             // Redirecione para a página de resultados
-            window.location.href = 'godpedia/results.html?q=' + searchTerm;
+            window.location.href = 'results.html?q=' + searchTerm;
         } else {
             // Se não houver termo de pesquisa, exiba uma mensagem de erro ou faça o que for apropriado para o seu caso
             console.error('Nenhum termo de pesquisa encontrado.');
