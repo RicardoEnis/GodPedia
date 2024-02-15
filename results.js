@@ -75,8 +75,6 @@ async function loadData() {
 
 // Chame a função para iniciar o processo
 document.addEventListener('DOMContentLoaded', loadData);
-    }
-}
 
 // Chame a função para iniciar o processo
 document.addEventListener('DOMContentLoaded', loadData);
