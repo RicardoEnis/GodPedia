@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (searchTerm) {
             sessionStorage.setItem('searchTerm', searchTerm);
-            window.location.href = '/results.html?q=' + searchTerm;
+            window.location.href = 'results.html?q=' + searchTerm;
         } else {
             console.error('Nenhum termo de pesquisa encontrado.');
         }
