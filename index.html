@@ -23,10 +23,10 @@
                 <li>Exposições</li>
             </ul>
         </nav>
-        <form>
+        <form id="searchForm" action="results.html" method="get">
             <div class="input-wrapper">
                 <label for="search">Pesquise pelo nome/origem e/ou religião</label>
-                <input id="search" type="text" placeholder="Nome/Origem/Religião">
+                <input id="search" type="text" name="q" placeholder="Nome/Origem/Religião">
             </div>
         </form>
         <img class="avatar" src="https://randomuser.me/api/portraits/women/60.jpg" alt="imagem de uma mulher">
@@ -35,23 +35,25 @@
     <main>
         <div class="mobEpilogue">
             <a href="./index.html">
-            <div class="h-wrapper">
-                <h1>GodPedia</h1>
-                <h2>A Enciclopédia dos Deuses</h2>
-                </a>
-            </div>
+                <div class="h-wrapper">
+                    <h1>GodPedia</h1>
+                    <h2>A Enciclopédia dos Deuses</h2>
+            </a>
+        </div>
         </div>
         <div class="tittle">
             <p>Artigos gerados aleatóriamente
                 <span> Abra a página do artigo para mais informações</span>
             </p>
         </div>
+        <div id="searchResults"></div>
         <div class="article-wrapper">
             <div class="mainArticle">
                 <figure>
                     <a href="./pages/jesus.html">Jesus</a>
                     <img src="./assets/jesusOldPaint.jpg" alt="O painel iconográfico mais antigo conhecido de jesus">
-                    <a href="./assets/jesusOldPaint.jpg" target="_blank" rel="noopener noreferrer">Representaçao de Jesus</a>
+                    <a href="./assets/jesusOldPaint.jpg" target="_blank" rel="noopener noreferrer">Representaçao de
+                        Jesus</a>
                 </figure>
                 <p> <span>Jesus</span>, também chamado Jesus de Nazaré foi um pregador e líder religioso judeu do
                     primeiro século. É a figura central do
@@ -80,7 +82,8 @@
                 <figure>
                     <a href="./pages/tupaBr.html">Tupã</a>
                     <img src="./assets/tupaBr.jpg" alt="Representação gráfica de tupã">
-                    <a href="./assets/tupaBr.jpg" target="_blank" rel="noopener noreferrer">Representaçao gráfica de Tupã</a>
+                    <a href="./assets/tupaBr.jpg" target="_blank" rel="noopener noreferrer">Representaçao gráfica de
+                        Tupã</a>
                 </figure>
                 <p> <span>Tupã</span>, era o mensageiro da divindade Nhanderuvuçu. Tupã não era exatamente
                     um deus, mas sim uma manifestação de um deus na forma do som do trovão. É importante destacar
@@ -103,7 +106,8 @@
                 <figure>
                     <a href="./pages/shiva.html">Shiva</a>
                     <img src="./assets/shivaIlustration.jpg" alt="Representação gráfica de Shiva">
-                    <a href="./assets/shivaIlustration.jpg" target="_blank" rel="noopener noreferrer">Representação gráfica de Shiva</a>
+                    <a href="./assets/shivaIlustration.jpg" target="_blank" rel="noopener noreferrer">Representação
+                        gráfica de Shiva</a>
                 </figure>
                 <p> <span>Shiva</span>, Na tradição hindu, Xiva é o destruidor, que destrói para construir algo novo,
                     motivo pelo qual muitos o chamam de "renovador" ou "transformador". As primeiras representações
@@ -126,8 +130,8 @@
             </div>
             <div class="mainArticle">
                 <figure>
-                    <a href="./pages/anu.html   ">Anu</a>
-                    <img src="./assets/mesoAnu.jpeg" alt="Imagem de Anu encrustada em uma parede do templo">
+                    <a href="./pages/anu.html" style="text-decoration: none;">Anu
+                    <img src="./assets/mesoAnu.jpeg" alt="Imagem de Anu encrustada em uma parede do templo"></a>
                     <a href="./assets/mesoAnu.jpeg" target="_blank" rel="noopener noreferrer">Representaçao de Anu</a>
                 </figure>
                 <p> <span>Anu</span>, o "senhor das constelações, rei dos espíritos e dos demônios". Anu habitava as
@@ -147,47 +151,64 @@
 
         <div class="carrousel-1">
             <figure class="item">
-                <img src="./assets/mesoAnu.jpeg" alt="">
-                <figcaption class="details">
-                    <h2>Anu</h2>
-                </figcaption>
-            </figure>
+                    <a href="/pages/anu.html">
+                    <img src="/assets/mesoAnu.jpeg" alt="">
+                    <figcaption class="details">
+                        <h2>Anu</h2>
+                    </figcaption>
+                </a>
+                </figure>
             <figure class="item">
-                <img src="./assets/budhaStatue.jpeg" alt="">
+                <a href="/pages/buda.html">
+                <img src="/assets/budhaStatue.jpeg" alt="">
                 <figcaption class="details">
                     <h2>Budha</h2>
                 </figcaption>
+                </a>
             </figure>
 
             <figure class="item">
-                <img src="./assets/Quetzalcoatl.jpg" alt="">
+                <a href="/pages/quetzalcoatl.html">
+                <img src="/assets/Quetzalcoatl.jpg" alt="">
                 <figcaption class="details">
                     <h2>Quetzalcóatl</h2>
                 </figcaption>
+            </a>
             </figure>
+
             <figure class="item">
-                <img src="./assets/shivaIlustration.jpg" alt="">
+                <a href="pages/shiva.html">
+                <img src="/assets/shivaIlustration.jpg" alt="">
                 <figcaption class="details">
                     <h2>Shiva</h2>
                 </figcaption>
+            </a>
             </figure>
+
             <figure class="item">
-                <img src="./assets/thor.jpg" alt="">
+                <a href="pages/thor.html">
+                <img src="/assets/thor.jpg" alt="">
                 <figcaption class="details">
                     <h2>Thor</h2>
                 </figcaption>
+                </a>
             </figure>
+
             <figure class="item">
-                <img src="./assets/tupaBr.jpg" alt="">
+                <a href="pages/tupaBr.html">
+                <img src="/assets/tupaBr.jpg" alt="">
                 <figcaption class="details">
                     <h2>Tupã</h2>
                 </figcaption>
+            </a>
             </figure>
             <figure class="item">
-                <img src="./assets/ZeusOldStatue.jpg" alt="">
+                <a href="pages/zeus.html">
+                <img src="/assets/ZeusOldStatue.jpg" alt="">
                 <figcaption class="details">
                     <h2>Zeus</h2>
                 </figcaption>
+            </a>
             </figure>
         </div>
     </main>
@@ -196,8 +217,8 @@
         <p>GodPedia 2024 Created by: Ricardo Enis</p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <script src="search.js"></script>
+   
 </body>
 
 </html>

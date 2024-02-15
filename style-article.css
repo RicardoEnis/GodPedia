@@ -169,6 +169,11 @@ main .h-wrapper {
     text-align: center;
     font-size: 2rem;
 }
+
+.carrousel-1 a {
+    text-decoration: none;
+    color: inherit;
+ }
 .carrousel-1 .item img {
     width: 100%;
     aspect-ratio: 16/9;
@@ -236,7 +241,7 @@ footer p {
         font-size: 1.6rem;
     }
     .carrousel-1 h2 {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
     header, nav {
         gap:6rem;

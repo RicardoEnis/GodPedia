@@ -184,10 +184,15 @@ main .h-wrapper {
 
 .carrousel-1 .item {
     flex: 0 0 auto;
-    max-width: 20vw ;
+    max-width: 20vw;
  }
- .carrousel-1 h2 {
-    font-size: 1.6rem;
+.carrousel-1 h2 {
+    font-size: .8rem;
+    
+ }
+ .carrousel-1 a {
+    text-decoration: none;
+    color: inherit;
  }
  .carrousel-1 .tags span {
     font-size: .6rem;
@@ -235,7 +240,7 @@ footer p {
         font-size: 1.6rem;
     }
     .carrousel-1 h2 {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
     header, nav {
         gap:6rem;
