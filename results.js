@@ -31,8 +31,8 @@ function displayResults(results) {
 
             article.innerHTML = `
                 <figure>
-                    <a href="${item.url}">${Array.isArray(item.title) ? item.title[0] : item.title}</a>
-                    ${imageURL}
+                    <a href="${item.url}">${Array.isArray(item.title) ? item.title[0] : item.title}
+                    ${imageURL}</a>
                     <a href="${item.url}" target="_blank" rel="noopener noreferrer">Representação de ${Array.isArray(item.title) ? item.title[0] : item.title}</a>
                 </figure>
                 <p>${item.content}</p>
