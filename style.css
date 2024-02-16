@@ -109,13 +109,13 @@ nav ul li:hover, .h-wrapper:hover{
     background-color:lightgrey;
     padding: 2rem;
     position: absolute;
-    top: 8.9rem;
+    top: 8rem;
     left: .5rem;
     border-radius: 0 0 .8rem .8rem;
     
 }
 
-#menu-container ul {
+#menu-container ol {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -132,7 +132,7 @@ nav ul li:hover, .h-wrapper:hover{
 #menu-container a {
     text-decoration: none;
     color:black;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 .avatar {
@@ -258,7 +258,7 @@ footer p {
 
 @media (max-width: 374px) {
     main{ 
-            overflow-y: scroll;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
@@ -295,5 +295,10 @@ footer p {
 .tittle {
     margin-top: 1.6rem;
 }
-
+#menu-container {
+  top: 8.9rem;
+}
+#menu-container a {
+    font-size: 1.8rem;
+}
 }

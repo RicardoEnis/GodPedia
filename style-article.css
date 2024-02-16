@@ -9,9 +9,9 @@
 :root {
     font-size: 62.5%;
 }
-header h1, header h2, header ul li {
+header h1, header h2, header ul li{
     display: none;
-}
+} 
 body {
     min-width: 32rem;
 }
@@ -81,12 +81,7 @@ nav ul {
     font-size: 1.6rem;
 }
 
-nav ul li:hover, .h-wrapper:hover{
-    cursor: pointer;
-    filter: brightness(150%);
-    color: #322f2f;
-    
-}
+
 /*menu*/
 .menu-btn{
     z-index: 999;
@@ -109,13 +104,13 @@ nav ul li:hover, .h-wrapper:hover{
     background-color:lightgrey;
     padding: 2rem;
     position: absolute;
-    top: 8.9rem;
+    top: 8rem;
     left: .5rem;
     border-radius: 0 0 .8rem .8rem;
     
 }
 
-#menu-container ul {
+#menu-container ol {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -132,7 +127,7 @@ nav ul li:hover, .h-wrapper:hover{
 #menu-container a {
     text-decoration: none;
     color:black;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -297,5 +292,10 @@ footer p {
 .tittle {
     margin-top: 1.6rem;
 }
-
+#menu-container {
+    top: 8.9rem;
+}
+#menu-container a {
+    font-size: 1.8rem;
+}
 }

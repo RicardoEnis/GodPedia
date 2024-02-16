@@ -87,11 +87,53 @@ nav ul li:hover, .h-wrapper:hover{
     color: #322f2f;
     
 }
+/*menu*/
+.menu-btn{
+    z-index: 999;
+}
 .menu-btn:hover{
     color: #900d0d;
     filter: brightness(110%);
     cursor: pointer;
     
+}
+#menu-container.hide {
+    display: none;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+    max-height: 50vh;
+    background-color:lightgrey;
+    padding: 2rem;
+    position: absolute;
+    top: 8rem;
+    left: .5rem;
+    border-radius: 0 0 .8rem .8rem;
+    
+}
+
+#menu-container ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: .8rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+#menu-container li {
+    margin-bottom: 3rem;
+}
+
+#menu-container a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .avatar {
@@ -257,5 +299,10 @@ footer p {
 .tittle {
     margin-top: 1.6rem;
 }
-
+#menu-container {
+    top: 8.9rem;
+}
+#menu-container a {
+    font-size: 1.8rem;
+}
 }
