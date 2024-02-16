@@ -79,10 +79,4 @@ document.addEventListener('DOMContentLoaded', loadData);
 // Chame a função para iniciar o processo
 document.addEventListener('DOMContentLoaded', loadData);
 document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.querySelector('.menu-btn');
-    const menuContainer = document.getElementById('menu-container');
-
-    menuBtn.addEventListener('click', function () {
-        menuContainer.classList.toggle('hide');
-    });
 });

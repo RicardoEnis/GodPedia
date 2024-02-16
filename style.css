@@ -164,6 +164,7 @@ main .h-wrapper {
        padding: .8rem;
        border-radius: .8rem;
        margin-top: .8rem;       
+       margin-bottom: .8rem;
 }
 .mainArticle {
     display: flex;
@@ -188,7 +189,10 @@ main .h-wrapper {
 }
 
 
-
+.present {
+text-align: center;
+font-size: .8rem;
+}
 /* carrousel */
 
 
@@ -199,14 +203,14 @@ main .h-wrapper {
     display: flex;
     flex-direction: column;
   align-items: center;
+  margin-top: .8rem;
+  text-align: center;
+  font-size: 2rem;
+  flex: 0 0 auto;
+  max-width: 25vw;
 
 }
 
-.carrousel-1 .item {
-    margin-top: .8rem;
-    text-align: center;
-    font-size: 2rem;
-}
 .carrousel-1 .item img {
     width: 100%;
     aspect-ratio: 16/9;
@@ -223,20 +227,13 @@ main .h-wrapper {
     margin-bottom: 3.2rem;
  }
 
-.carrousel-1 .item {
-    flex: 0 0 auto;
-    max-width: 20vw;
- }
 .carrousel-1 h2 {
-    font-size: .8rem;
+    font-size: .6rem;
     
  }
  .carrousel-1 a {
     text-decoration: none;
     color: inherit;
- }
- .carrousel-1 .tags span {
-    font-size: .6rem;
  }
 
  /*footer*/
@@ -264,7 +261,7 @@ footer p {
             gap: 1.2rem;
     }
     .carrousel-1 h2 {
-        font-size: 1rem;
+        font-size: .6rem;
     }
 }
 
@@ -283,6 +280,9 @@ footer p {
     .carrousel-1 h2 {
         font-size: 1.6rem;
     }
+    .carrousel-1 .item {
+        max-width: 20vw;
+    }
     header, nav {
         gap:6rem;
     }
@@ -291,6 +291,9 @@ footer p {
     }
 .mobEpilogue {
     display: none;
+}
+.present{
+    font-size: 1.4rem;
 }
 .tittle {
     margin-top: 1.6rem;

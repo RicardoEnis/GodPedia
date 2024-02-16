@@ -9,12 +9,17 @@
 :root {
     font-size: 62.5%;
 }
-header h1, header h2, header ul li{
+
+header h1,
+header h2,
+header ul li {
     display: none;
-} 
+}
+
 body {
     min-width: 32rem;
 }
+
 header {
     background-color: lightblue;
     border-radius: .6rem;
@@ -30,28 +35,34 @@ nav ul {
     display: flex;
     gap: 1rem;
     align-items: center;
- 
+
 }
+
 .h-wrapper h1 {
     font-size: 3.6rem;
     max-width: 20rem;
     font-family: 'Trebuchet MS';
 
 }
+
 .h-wrapper h2 {
     font-size: 1.4rem;
     font-family: 'Trebuchet MS';
 }
+
 .h-wrapper a {
     text-decoration: none;
     color: inherit;
 }
+
 header .menu-btn {
     font-size: 3.6rem;
 }
+
 header form {
     flex: 1;
 }
+
 header .input-wrapper label {
     height: 1px;
     width: 1px;
@@ -76,6 +87,7 @@ header .input-wrapper label {
 .input-wrapper input::placeholder {
     opacity: 0.56;
 }
+
 nav ul {
     list-style: none;
     font-size: 1.6rem;
@@ -83,15 +95,17 @@ nav ul {
 
 
 /*menu*/
-.menu-btn{
+.menu-btn {
     z-index: 999;
 }
-.menu-btn:hover{
+
+.menu-btn:hover {
     color: #900d0d;
     filter: brightness(110%);
     cursor: pointer;
-    
+
 }
+
 #menu-container.hide {
     display: none;
 }
@@ -101,13 +115,13 @@ nav ul {
     flex-direction: column;
     max-width: 30vw;
     max-height: 50vh;
-    background-color:lightgrey;
+    background-color: lightgrey;
     padding: 2rem;
     position: absolute;
     top: 8rem;
     left: .5rem;
     border-radius: 0 0 .8rem .8rem;
-    
+
 }
 
 #menu-container ol {
@@ -126,7 +140,7 @@ nav ul {
 
 #menu-container a {
     text-decoration: none;
-    color:black;
+    color: black;
     font-size: 1.4rem;
     font-weight: bold;
 }
@@ -137,15 +151,18 @@ nav ul {
     object-fit: cover;
     border-radius: 50%;
 }
+
 /* main */
-.tittle{
+.tittle {
     max-width: fit-content;
     margin: 0 auto;
-    
+
 }
+
 .tittle p {
     font-size: 1.2rem;
 }
+
 .tittle span {
     color: lightslategray;
     display: block;
@@ -156,17 +173,20 @@ figure {
     flex-direction: column;
     display: flex;
 }
+
 main .h-wrapper {
-       width: fit-content;
-       margin: auto;
-       border: .1rem solid lightblue;
-       padding: .8rem;
-       border-radius: .8rem;
-       margin-top: .8rem;       
+    width: fit-content;
+    margin: auto;
+    border: .1rem solid lightblue;
+    padding: .8rem;
+    border-radius: .8rem;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
 }
+
 .mainArticle {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: column;
     font-size: 1.5rem;
     margin-bottom: 1.6rem;
     border-bottom: .1rem solid lightblue;
@@ -175,18 +195,23 @@ main .h-wrapper {
 .mainArticle img {
     max-height: 23rem;
     margin-right: 1.2rem;
-    max-width: max-content;
+    max-width: 18rem;
     -webkit-box-flex: 1;
 }
+
 .mainArticle a {
     font-size: 1.2rem;
 }
+
 .mainArticle p span {
     font-size: 2.0rem;
     font-weight: bold;
 }
 
-
+.present {
+    text-align: center;
+    font-size: .8rem;
+}
 
 /* carrousel */
 
@@ -197,20 +222,20 @@ main .h-wrapper {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  align-items: center;
-
-}
-
-.carrousel-1 .item {
+    align-items: center;
     margin-top: .8rem;
     text-align: center;
     font-size: 2rem;
+    flex: 0 0 auto;
+    max-width: 25vw;
 }
+
 
 .carrousel-1 a {
     text-decoration: none;
     color: inherit;
- }
+}
+
 .carrousel-1 .item img {
     width: 100%;
     aspect-ratio: 16/9;
@@ -219,26 +244,21 @@ main .h-wrapper {
     border: 1px solid black;
     border-radius: .8rem .8rem 0 0;
 }
+
 .carrousel-1 {
     display: flex;
-    overflow-x: scroll; 
+    overflow-x: scroll;
     padding: 0 1.2rem;
     gap: .8rem;
     margin-bottom: 3.2rem;
- }
+}
 
-.carrousel-1 .item {
-    flex: 0 0 auto;
-    max-width: 20vw ;
- }
- .carrousel-1 h2 {
+.carrousel-1 h2 {
     font-size: 1.6rem;
- }
- .carrousel-1 .tags span {
-    font-size: .6rem;
- }
+}
 
- /*footer*/
+
+/*footer*/
 footer {
     background-color: lightblue;
     position: fixed;
@@ -249,6 +269,7 @@ footer {
     line-height: 180%;
     text-align: center;
 }
+
 footer p {
     margin-top: .5rem;
 }
@@ -256,46 +277,68 @@ footer p {
 /*media*/
 
 @media (max-width: 374px) {
-    main{ 
-            overflow-y: scroll;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
+    main {
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
     }
+
     .carrousel-1 h2 {
         font-size: 1rem;
     }
 }
 
 @media (min-width: 1020px) {
-    .article-wrapper {      
+    .article-wrapper {
         margin-bottom: 1.2rem;
     }
-    .mainArticle{
+
+    .mainArticle {
+        display: flex;
         flex-direction: row;
     }
+
     .mainArticle .image-wrapper {
         font-size: 1.6rem;
     }
+
     .carrousel-1 h2 {
         font-size: 1.6rem;
     }
-    header, nav {
-        gap:6rem;
+
+    .carrousel-1 .item {
+        max-width: 20vw;
     }
-     header ul li, header h1, header h2 {
+
+    header,
+    nav {
+        gap: 6rem;
+    }
+
+    header ul li,
+    header h1,
+    header h2 {
         display: flex;
     }
-.mobEpilogue {
-    display: none;
-}
-.tittle {
-    margin-top: 1.6rem;
-}
-#menu-container {
-    top: 8.9rem;
-}
-#menu-container a {
-    font-size: 1.8rem;
-}
+
+    .mobEpilogue {
+        display: none;
+    }
+
+    .tittle {
+        margin-top: 1.6rem;
+    }
+
+    .present {
+        font-size: 1.4rem;
+    }
+
+    #menu-container {
+        top: 8.9rem;
+    }
+
+    #menu-container a {
+        font-size: 1.8rem;
+    }
 }

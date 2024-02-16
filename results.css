@@ -167,7 +167,8 @@ main .h-wrapper {
        border: .1rem solid lightblue;
        padding: .8rem;
        border-radius: .8rem;
-       margin-top: .8rem;       
+       margin-top: .8rem;
+       margin-bottom: .8rem;
 }
 .mainArticle {
     display: flex;
@@ -191,7 +192,10 @@ main .h-wrapper {
     font-weight: bold;
 }
 
-
+.present{
+    font-size: .8rem;
+    text-align: center;
+}
 
 /* carrousel */
 
@@ -229,7 +233,7 @@ main .h-wrapper {
 
 .carrousel-1 .item {
     flex: 0 0 auto;
-    max-width: 20vw;
+    max-width: 25vw;
  }
 .carrousel-1 h2 {
     font-size: .8rem;
@@ -293,11 +297,17 @@ footer p {
      header ul li, header h1, header h2 {
         display: flex;
     }
+    .carrousel-1 .item {
+        max-width: 20vw;
+    }
 .mobEpilogue {
     display: none;
 }
 .tittle {
     margin-top: 1.6rem;
+}
+.present{
+    font-size: 1.4rem;
 }
 #menu-container {
     top: 8.9rem;
