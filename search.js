@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+//menu handler
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const menuContainer = document.getElementById('menu-container');

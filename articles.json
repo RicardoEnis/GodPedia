@@ -1,0 +1,58 @@
+[
+    {
+        "title": "jesus",
+        "content": "Também chamado Jesus de Nazaré foi um pregador e líder religioso judeu do primeiro século. É a figura central do cristianismo,",
+        "categories": ["cristianismo", "judaismo"],
+        "url": "pages/jesus.html",
+        "imageURL": "godpedia-main/assets/jesusOldPaint.jpg"
+    },
+    {
+        "title": "tupa",
+        "content": "era o mensageiro da divindade Nhanderuvuçu. Tupã não era exatamente um deus, mas sim uma manifestação de um deus na forma do som do trovão. É importante destacar esta confusão feita pelos jesuítas.",
+        "categories": ["indigenas", "brasileiros"],
+        "url": "pages/tupaBr.html",
+        "imageURL": "assets/tupaBr.jpg"
+    },
+    {
+        "title": "zeus",
+        "content": "é o pai dos deuses, que exercia autoridade sobre os deuses olímpicos na antiga religião grega. É o deus dos céus, raios, relâmpagos que mantêm a ordem e justiça na mitologia grega.",
+        "categories": ["grecia"],
+        "url": "pages/zeus.html",
+        "imageURL": "../assets/ZeusOldStatue.jpg"
+    },
+    {
+        "title": "shiva",
+        "content": "Na tradição hindu, Xiva é o destruidor, que destrói para construir algo novo motivo pelo qual muitos o chamam de 'renovador' ou 'transformador'.",
+        "categories": ["hinduismo", "budismo"],
+        "url": "pages/shiva.html",
+        "imageURL": "./assets/shivaIlustration.jpg"
+    },
+    {
+        "title": "queotzacoatl",
+        "content": "divindade na cultura e na literatura mesoamericanas cujo nome vem da língua Nahuatl e significa 'serpente emplumada' ou 'serpente de penas quetzal'.",
+        "categories": ["mesoamerica", "asteca"],
+        "url": "pages/quetzalcoatl.html",
+        "imageURL": "assets/Quetzalcoatl.jpg"
+    },
+    {
+        "title": "Anu",
+      "content": "O Senhor das constelações, rei dos espíritos e dos demônios. Anu habitava asmais altas regiões celestiais. Era tido também como juiz dos homens e dos deuses",
+        "categories": ["mesopotania"],
+        "url": "pages/anu.html",
+        "imageURL": "/assets/mesoAnu.jpeg"
+    },
+    {
+        "title": "buda",
+        "content": "é um título dado na filosofia budista àqueles que despertaram plenamente para a verdadeira natureza dos fenômenos e se puseram a divulgar tal descoberta aos demais seres.",
+        "categories": ["hinduismo", "budismo"],
+        "url": "pages/buda.html",
+        "imageURL": "/assets/budhaStatue.jpeg"
+    },
+    {
+        "title": "thor",
+        "content": "filho de Odin, rei de Asgard, e da giganta, Jord. Ele tinha um irmão mais novo, Meili. Em algum momento de sua vida, ele se casaria com Sif e teria um filho, Modi",
+        "categories": ["nordico", "asgard"],
+        "url": "pages/thor.html",
+        "imageURL": "/assets/thor.jpg"
+    }
+]

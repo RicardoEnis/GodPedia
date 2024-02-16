@@ -26,30 +26,83 @@ function chooseRandomArticles(articles) {
   return shuffledArticles.slice(0, 4);
 }
 
+// Função para ajustar caminho da URL da imagem
+function ajustarCaminhoImagem(src) {
+  if (src.startsWith('../assets/')) {
+    return src.replace('../assets/', 'assets/');
+  }
+  return src;
+}
+
+// Função para ajustar caminho do link <a> que traz texto
+function ajustarCaminhoLinkTexto(href) {
+  if (href.startsWith('./')) {
+    return href.replace('./', 'pages/');
+  }
+  return href;
+}
+
+// Função para ajustar caminho do link <a> que traz o link de uma imagem
+function ajustarCaminhoLinkImagem(href) {
+  if (href.startsWith('../assets/')) {
+    return href.replace('../assets/', 'assets/');
+  }
+  return href;
+}
+
+// Função para ajustar caminhos no HTML
+function ajustarCaminhosHTML(html) {
+  var tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+
+  var imageElements = tempDiv.querySelectorAll('figure img');
+  var textLinkElements = tempDiv.querySelectorAll('figure a:not([target="_blank"])');
+  var imageLinkElements = tempDiv.querySelectorAll('figure a[target="_blank"]');
+
+  // Ajustar caminho da URL da imagem
+  imageElements.forEach(function (element) {
+    var currentSrc = element.getAttribute('src');
+    var newSrc = ajustarCaminhoImagem(currentSrc);
+    element.setAttribute('src', newSrc);
+  });
+
+  // Ajustar caminho do link <a> que traz texto
+  textLinkElements.forEach(function (element) {
+    var currentHref = element.getAttribute('href');
+    var newHref = ajustarCaminhoLinkTexto(currentHref);
+    element.setAttribute('href', newHref);
+  });
+
+  // Ajustar caminho do link <a> que traz o link de uma imagem
+  imageLinkElements.forEach(function (element) {
+    var currentHref = element.getAttribute('href');
+    var newHref = ajustarCaminhoLinkImagem(currentHref);
+    element.setAttribute('href', newHref);
+  });
+
+  return tempDiv.innerHTML;
+}
 // Função para atualizar as mainArticles no DOM
 async function updateMainArticles() {
-  // URL do seu JSON (substitua pela sua URL real)
-  const jsonUrl = './finder.json';
-  
+  const jsonUrl = './articles.json';
+
   try {
-    // Buscar o JSON por meio de fetch
     const jsonData = await fetchJson(jsonUrl);
-
-    // Escolher aleatoriamente 4 objetos do JSON
     const chosenItems = chooseRandomArticles(jsonData);
-
-    // Atualizar as mainArticles no DOM
     const articleWrapper = document.querySelector('.article-wrapper');
-    
+
     for (let i = 0; i < chosenItems.length; i++) {
       const url = chosenItems[i].url;
       const htmlData = await fetchHtml(url);
       const mainArticleContent = await extractMainArticleContent(htmlData);
 
+      // Ajustar caminhos no HTML antes de adicioná-lo ao DOM
+      const adjustedHtml = ajustarCaminhosHTML(mainArticleContent);
+
       // Substituir o conteúdo atual pela nova mainArticle
       const mainArticleDiv = document.createElement('div');
       mainArticleDiv.classList.add('mainArticle');
-      mainArticleDiv.innerHTML = mainArticleContent;
+      mainArticleDiv.innerHTML = adjustedHtml;
 
       articleWrapper.appendChild(mainArticleDiv);
     }
